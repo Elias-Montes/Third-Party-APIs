@@ -2,7 +2,7 @@ var currentDay = $('#currentDay');
 currentDay.text(dayjs().format('MMMM DD, YYYY'));
 
  $('.saveBtn').on('click', function(){
-  var userInput = $('#text').val();
+  var userInput = $(this).siblings('textarea').val();
   var hours = $(this).parent().attr('id');
   console.log('button clicked');
   localStorage.setItem(hours, userInput);
